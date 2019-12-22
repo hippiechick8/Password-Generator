@@ -8,52 +8,71 @@
 
     <!-- Link to Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
-  
+
     <!-- Link to CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
   <body>
-    <div class="wrapper">
+    <div class="wrapper mx-auto">
       <header>
-        <h1>Password Generator</h1>
+        <h1 class="passwordGenerator text-center">Password Generator</h1>
       </header>
 
-      <!-- establishing the full card -->
+     <!-- establishing the full card -->
       <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
+        
+        <!-- instructions to capture total number of needed characters -->
+        <div class="card-header text-center" id="charLength">
+          <h4>Please enter the total number of characters your password needs (a number between 8 - 128).
+          </h4>
+        </div>
+            
+        <!-- text area to capture total number of needed characters -->
+        <div class="form-group mt-4 mx-auto">
+          <input
+            type="number"
+            class="form-control"
+            id="totalNumChar"
+            aria-label="Total needed characters">
+          </input>
+        </div>
+  
+        <!-- text area to capture character types -->
+        <div class="card-header text-center mb-2" id="charTypes">
+          <h4>Please check the boxes next to all character types your password needs to contain.
+          </h4>
         </div>
 
-        <!-- checkboxes for needed character types -->
-        <div class="checkbox" id="needSpecialChar">
-          <label><input type="checkbox" value="">Do you need your password to contain special characters?</label>
+        <!-- checkboxes to capture needed character types -->
+        <div class="checkbox mx-auto" id="needSpecialChar">
+          <label><input type="checkbox" value="">special characters</label>
         </div>
-        <div class="checkbox" id="needNumericChar">
-          <label><input type="checkbox" value="">Do you need your password to contain numeric characters?</label>
+        <div class="checkbox mx-auto" id="needNumericChar">
+          <label><input type="checkbox" value="">numeric characters</label>
         </div>
-        <div class="checkbox" id="needLowercaseChar">
-          <label><input type="checkbox" value="">Do you need your password to contain lowercase characters?</label>
+        <div class="checkbox mx-auto" id="needLowercaseChar">
+          <label><input type="checkbox" value="">lowercase characters</label>
         </div>
-        <div class="checkbox" id="needUppercaseChar">
-          <label><input type="checkbox" value="">Do you need your password to contain uppercase characters?</label>
+        <div class="checkbox mx-auto" id="needUppercaseChar">
+          <label><input type="checkbox" value="">uppercase characters</label>
         </div>
 
         <!-- text area to display generated password -->
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
+        <div class="card-body mx-auto">
+          <input class="form-control" id="password"
+            type = "text"
             placeholder="Your Secure Password"
-            aria-label="Generated Password">
-          </textarea>
+            aria-label="Generated Password"
+            readonly>
+          </input>
         </div>
 
         <!-- buttons -->
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password
+        <div class="card-footer mx-auto">
+          <button type="button" id="generate" class="btn btn-danger rounded-2">Generate Password
           </button>
-          <button id="copy" class="btn">Copy to Clipboard
+          <button type="button" id="copy" class="btn btn-secondary rounded-2">Copy to Clipboard
           </button>
         </div>
       </div>
