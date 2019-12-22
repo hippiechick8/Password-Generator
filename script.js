@@ -13,3 +13,27 @@ var copyBtn = document.querySelector("#copy");
 
 
 
+
+
+
+
+// functions to generate random special character, number, lowercase, 
+// and uppercase characters using assigned character numbers
+// https://www.ascii-code.com/
+
+function randomSpecialCharacter() {
+  return String.fromCharCode(Math.floor(Math.random() *10) + 33);
+}
+
+function randomNumericCharacter() {
+  return String.fromCharCode(Math.floor(Math.random() *10) + 48);
+}
+
+function randomLowercaseCharacter() {
+  return String.fromCharCode(Math.floor(Math.random() *26) + 97);
+}
+
+function randomUppercaseCharacter() {
+  return String.fromCharCode(Math.floor(Math.random() *26) + 65);
+}
+
