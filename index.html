@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
 
-    <!-- Link to Bootstrap 
+    <!-- Link to Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
-    -->
-
+  
     <!-- Link to CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
@@ -20,11 +19,27 @@
         <h1>Password Generator</h1>
       </header>
 
+      <!-- establishing the full card -->
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
 
+        <!-- checkboxes for needed character types -->
+        <div class="checkbox" id="needSpecialChar">
+          <label><input type="checkbox" value="">Do you need your password to contain special characters?</label>
+        </div>
+        <div class="checkbox" id="needNumericChar">
+          <label><input type="checkbox" value="">Do you need your password to contain numeric characters?</label>
+        </div>
+        <div class="checkbox" id="needLowercaseChar">
+          <label><input type="checkbox" value="">Do you need your password to contain lowercase characters?</label>
+        </div>
+        <div class="checkbox" id="needUppercaseChar">
+          <label><input type="checkbox" value="">Do you need your password to contain uppercase characters?</label>
+        </div>
+
+        <!-- text area to display generated password -->
         <div class="card-body">
           <textarea
             readonly
@@ -34,11 +49,8 @@
           </textarea>
         </div>
 
+        <!-- buttons -->
         <div class="card-footer">
-          <button id="Yes" class="btn">Yes
-          </button>
-          <button id="No" class="btn">No
-          </button>
           <button id="generate" class="btn">Generate Password
           </button>
           <button id="copy" class="btn">Copy to Clipboard
